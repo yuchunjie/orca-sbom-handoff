@@ -1,0 +1,1 @@
+"mcuboot":"/Users/jie/Desktop/OpenCode_Proj/orca-sbom-handoff/01_sbom_vex/zephyrproject/bootloader/mcuboot":"/Users/jie/Desktop/OpenCode_Proj/orca-sbom-handoff/01_sbom_vex/zephyrproject/bootloader/mcuboot/boot/zephyr/sysbuild"

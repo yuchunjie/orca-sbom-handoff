@@ -1,0 +1,169 @@
+{
+  "$schema": "http://cyclonedx.org/schema/vex-1.0.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-23T12:00:00Z",
+    "tools": [
+      {
+        "vendor": "Zephyr Project",
+        "name": "west spdx + manual analysis",
+        "version": "3.6.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "zephyr-hello-world",
+      "version": "3.6.0",
+      "purl": "pkg:generic/zephyr/hello_world@3.6.0"
+    }
+  },
+  "vulnerabilities": [
+    {
+      "id": "CVE-2026-78118",
+      "source": {
+        "name": "Zephyr Security Advisory",
+        "url": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-gm6w-pv43-m3vf"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 7.0,
+          "severity": "HIGH",
+          "method": "CVSSv3.1",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "Vulnerability requires SMP (CONFIG_MP_MAX_NUM_CPUS > 1) and CONFIG_USERSPACE. The hello_world sample on qemu_x86 is built without SMP support (single CPU) and without userspace. The vulnerable code path in z_timer_expiration_handler() is only reachable on SMP systems. Source: Zephyr advisory GHSA-gm6w-pv43-m3vf, affected versions >= 2.2.0, <= 4.4.2, fixed in 4.5.0.",
+        "responses": ["workaround_available"]
+      },
+      "affects": [
+        {
+          "ref": "pkg:github/zephyrproject-rtos/zephyr@3.6.0"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-19936",
+      "source": {
+        "name": "Zephyr Security Advisory",
+        "url": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-4p55-7h77-fhgr"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 4.8,
+          "severity": "MEDIUM",
+          "method": "CVSSv3.1",
+          "vector": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Vulnerability in Bluetooth Mesh delayable message queue (subsys/bluetooth/mesh/delayable.c). The hello_world sample does not enable Bluetooth (CONFIG_BT=n) or Bluetooth Mesh (CONFIG_BT_MESH=n). The vulnerable code is not compiled into the firmware. Source: Zephyr advisory GHSA-4p55-7h77-fhgr, affected versions >= 3.6.0, <= 4.4.2, fixed in 4.5.0.",
+        "responses": ["workaround_available"]
+      },
+      "affects": [
+        {
+          "ref": "pkg:github/zephyrproject-rtos/zephyr@3.6.0"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-19937",
+      "source": {
+        "name": "Zephyr Security Advisory",
+        "url": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-5rrx-xww6-5xrh"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 4.8,
+          "severity": "MEDIUM",
+          "method": "CVSSv3.1",
+          "vector": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Vulnerability in Bluetooth Mesh Access layer (subsys/bluetooth/mesh/access.c). The hello_world sample does not enable Bluetooth Mesh. The vulnerable code is not compiled. Source: Zephyr advisory GHSA-5rrx-xww6-5xrh, affected versions >= 3.6.0, <= 4.4.2, fixed in 4.5.0.",
+        "responses": ["workaround_available"]
+      },
+      "affects": [
+        {
+          "ref": "pkg:github/zephyrproject-rtos/zephyr@3.6.0"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-19935",
+      "source": {
+        "name": "Zephyr Security Advisory",
+        "url": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-6gp4-cwf7-2vp8"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 7.5,
+          "severity": "HIGH",
+          "method": "CVSSv3.1",
+          "vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Vulnerability in Bluetooth L2CAP CoC channel handling (subsys/bluetooth/host/l2cap.c). The hello_world sample does not enable Bluetooth stack (CONFIG_BT=n). The vulnerable code is not compiled. Source: Zephyr advisory GHSA-6gp4-cwf7-2vp8, affected versions >= 2.0.0, <= 4.4.2, fixed in 4.5.0.",
+        "responses": ["workaround_available"]
+      },
+      "affects": [
+        {
+          "ref": "pkg:github/zephyrproject-rtos/zephyr@3.6.0"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-76787",
+      "source": {
+        "name": "Zephyr Security Advisory",
+        "url": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-82gq-cmqw-xgx2"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 4.8,
+          "severity": "MEDIUM",
+          "method": "CVSSv3.1",
+          "vector": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "Vulnerability in CAN bus subsystem (drivers/can/can.c). The hello_world sample does not enable CAN (CONFIG_CAN=n). The vulnerable code is not compiled. Source: Zephyr advisory GHSA-82gq-cmqw-xgx2, affected versions >= 2.4.0, <= 4.4.2, fixed in 4.5.0.",
+        "responses": ["workaround_available"]
+      },
+      "affects": [
+        {
+          "ref": "pkg:github/zephyrproject-rtos/zephyr@3.6.0"
+        }
+      ]
+    }
+  ]
+}

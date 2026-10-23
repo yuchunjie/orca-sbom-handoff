@@ -1,0 +1,113 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:3f2504e0-4f89-11d3-9a0c-0305e82c3301",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-23T12:00:00Z",
+    "tools": [
+      {
+        "vendor": "Zephyr Project",
+        "name": "west spdx",
+        "version": "1.5.0"
+      },
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-python",
+        "version": "2.10.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "zephyr-hello-world",
+      "version": "3.6.0",
+      "purl": "pkg:generic/zephyr/hello_world@3.6.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "zephyr-kernel",
+      "version": "3.6.0",
+      "purl": "pkg:github/zephyrproject-rtos/zephyr@3.6.0",
+      "description": "Zephyr RTOS Kernel v3.6.0 (LTS)",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "468eb56cf242eedba62006ee758700ee6148763f"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/zephyrproject-rtos/zephyr/releases/tag/v3.6.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cmsis",
+      "version": "5.9.0",
+      "purl": "pkg:github/zephyrproject-rtos/cmsis@4b96cbb174678dcd3ca86e11e1f24bc5f8726da0",
+      "description": "ARM CMSIS 5.9.0 (Zephyr fork)",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4b96cbb174678dcd3ca86e11e1f24bc5f8726da0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinycrypt",
+      "version": "0.4.0",
+      "purl": "pkg:github/zephyrproject-rtos/tinycrypt@3e9a49d2672ec01435ffbf0d788db6d95ef28de0",
+      "description": "TinyCrypt cryptographic library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3e9a49d2672ec01435ffbf0d788db6d95ef28de0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "zcbor",
+      "version": "0.8.1",
+      "purl": "pkg:github/zephyrproject-rtos/zcbor@d3093b5684f62268c7f27f8a5079f166772619de",
+      "description": "zCBOR encoding/decoding library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d3093b5684f62268c7f27f8a5079f166772619de"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mbedtls",
+      "version": "3.5.0",
+      "purl": "pkg:github/zephyrproject-rtos/mbedtls@6ec4abdcda78dfc47315af568f93e5ad4398dea0",
+      "description": "Mbed TLS cryptographic library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6ec4abdcda78dfc47315af568f93e5ad4398dea0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mcuboot",
+      "version": "2.1.0",
+      "purl": "pkg:github/zephyrproject-rtos/mcuboot@a4eda30f5b0cfd0cf15512be9dcd559239dbfc91",
+      "description": "MCUboot secure bootloader",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a4eda30f5b0cfd0cf15512be9dcd559239dbfc91"
+        }
+      ]
+    }
+  ]
+}
